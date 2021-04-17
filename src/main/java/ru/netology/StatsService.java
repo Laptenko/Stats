@@ -15,7 +15,7 @@ public class StatsService {
         return average;
     }
 
-    public int monthMaxSale(int[] sales) { // номер месяца с максимальной продажей
+    public static int monthMaxSale(int[] sales) { // номер месяца с максимальной продажей
         int month = 0;
         int maxMonth = 0;
         int max = sales[0];
@@ -29,7 +29,7 @@ public class StatsService {
         return maxMonth;
     }
 
-    public int monthMinSale(int[] sales) { // номер месяца с минимальной продажей
+    public static int monthMinSale(int[] sales) { // номер месяца с минимальной продажей
         int month = 0;
         int maxMonth = 0;
         int max = sales[0];
@@ -43,7 +43,7 @@ public class StatsService {
         return maxMonth;
     }
 
-    public int countMonthSaleLessAverage(int[] sales) { // количество месяцев, где продажа была ниже сренего
+    public static int countMonthSaleLessAverage(int[] sales) { // количество месяцев, где продажа была ниже сренего
         int count = 0;
         for (int sale : sales){
             if (sale < StatsService.average(sales)){
@@ -53,7 +53,7 @@ public class StatsService {
         return count;
     }
 
-    public int countMonthSaleMoreAverage(int[] sales) { // количество месяцев, где продажа была выше сренего
+    public static int countMonthSaleMoreAverage(int[] sales) { // количество месяцев, где продажа была выше сренего
         int count = 0;
         for (int sale : sales){
             if (sale > StatsService.average(sales)){
